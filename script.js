@@ -12,8 +12,8 @@ date.addEventListener("change", showAge);
 let details = document.querySelectorAll(".precise input")
 details.forEach(info => {
     info.addEventListener("change", (e) => {
-        let min = info.getAttribute("min")
-        let max = info.getAttribute("max")
+        let min = +info.getAttribute("min")
+        let max = +info.getAttribute("max")
 
         if (e.target.value > min && e.target.value < max) showAge();   
         else info.value = "";
