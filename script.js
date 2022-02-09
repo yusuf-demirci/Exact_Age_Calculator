@@ -45,11 +45,11 @@ function showAge(){
         let minutes = currentDate.getMinutes() - (+birthMinute.value || birthday.getHours());
         let seconds = currentDate.getSeconds() - (+birthSecond.value || birthday.getSeconds());
 
-        if (months < 0) { years--; months += 12; }
-        if (days < 0) { months--; days += 31; }
-        if (hours < 0) { days--; hours += 24; }
-        if (minutes < 0) { hours--; minutes += 60; }
         if (seconds < 0) { minutes--; seconds += 60; }
+        if (minutes < 0) { hours--; minutes += 60; }
+        if (hours < 0) { days--; hours += 24; }
+        if (days < 0) { months--; days += 31; }
+        if (months < 0) { years--; months += 12; }
 
         let showYear = document.querySelector("#years");
         let showMonth = document.querySelector("#months");
@@ -71,9 +71,3 @@ function showAge(){
         date.value = ""
     }
 }
-
-
-
-      
-
-
