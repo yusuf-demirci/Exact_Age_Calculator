@@ -1,3 +1,7 @@
+setTimeout(() => {
+    document.querySelector("#loading").style.visibility = "hidden"
+}, 1000)
+
 let date = document.querySelector("input[type=date]");
 let birthHour = document.querySelector("#hour");
 let birthMinute = document.querySelector("#minute");
@@ -17,6 +21,7 @@ details.forEach(info => {
 })
 
 function showAge(){
+    document.body.style.backgroundImage = "url('./img/images.jfif')";
     let birthday = new Date(date.value)
 
     let countDown = document.querySelector(".countdown")
