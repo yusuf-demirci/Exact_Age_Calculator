@@ -33,7 +33,7 @@ function showAge(){
     image.style.display = "none"
 
     
-    const start = setInterval(() => {
+    setInterval(() => {
         
         birthday = new Date(date.value)
         let currentDate = new Date();
